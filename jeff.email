@@ -1,0 +1,27 @@
+
+Hi Jeff
+
+I have copied the project to GIT
+and have included a zip file with this email
+
+Things to take note of:
+
+I made may assumptions, some may be correct some may be wrong, but it is at least doing something.
+I documented some questions and some assumptions I made in Questions_comments.txt
+
+The new interfaces are documented in the NewInterface.txt file
+
+The output from the 3 test scripts are in task_results.txt
+
+My process to run and test this was to ....
+
+	double click 1_run.bat to start the server
+	double click task1.bat to run the test cases for task 1
+	double click task2.bat to run the valid test cases for task 2
+	double click task2_errors.bat to run the invalid test cases for task 2
+	
+If there are any questions, you can always call me.
+
+Thanks
+Ken Carpenter
+

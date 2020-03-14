@@ -1,0 +1,65 @@
+
+
+Verify that the application returns an employee
+
+{"employeeId":"16a596ae-edd3-4847-99fe-c4518e82c86f","firstName":"John","lastName":"Lennon","position":"Development Mana
+ger","department":"Engineering","directReports":[{"employeeId":"b7839309-3348-463b-a7e3-5de1c168beb3","firstName":null,"
+lastName":null,"position":null,"department":null,"directReports":null},{"employeeId":"03aa1462-ffa9-4978-901b-7c001562cf
+6f","firstName":null,"lastName":null,"position":null,"department":null,"directReports":null}]}
+
+Verify that the Reporting Structure is returned for a valid employee
+
+{"employee":{"employeeId":"16a596ae-edd3-4847-99fe-c4518e82c86f","firstName":"John","lastName":"Lennon","position":"Deve
+lopment Manager","department":"Engineering","directReports":[{"employeeId":"b7839309-3348-463b-a7e3-5de1c168beb3","first
+Name":null,"lastName":null,"position":null,"department":null,"directReports":null},{"employeeId":"03aa1462-ffa9-4978-901
+b-7c001562cf6f","firstName":null,"lastName":null,"position":null,"department":null,"directReports":null}]},"numberOfRepo
+rts":2}
+
+Verify that the an error is returned for a invalid employee
+
+{"timestamp":1584132796348,"status":500,"error":"Internal Server Error","exception":"java.lang.RuntimeException","messag
+e":"Invalid employeeId: 16a596ae","path":"/reportingstructure/16a596ae"}
+
+
+Verify that the application returns an employee
+
+{"employeeId":"16a596ae-edd3-4847-99fe-c4518e82c86f","firstName":"John","lastName":"Lennon","position":"Development Mana
+ger","department":"Engineering","directReports":[{"employeeId":"b7839309-3348-463b-a7e3-5de1c168beb3","firstName":null,"
+lastName":null,"position":null,"department":null,"directReports":null},{"employeeId":"03aa1462-ffa9-4978-901b-7c001562cf
+6f","firstName":null,"lastName":null,"position":null,"department":null,"directReports":null}]}
+
+Verify that the Compensation Structure is created for an employee
+
+{"employee":{"employeeId":"16a596ae-edd3-4847-99fe-c4518e82c86f","firstName":"John","lastName":"Lennon","position":"Deve
+lopment Manager","department":"Engineering","directReports":[{"employeeId":"b7839309-3348-463b-a7e3-5de1c168beb3","first
+Name":null,"lastName":null,"position":null,"department":null,"directReports":null},{"employeeId":"03aa1462-ffa9-4978-901
+b-7c001562cf6f","firstName":null,"lastName":null,"position":null,"department":null,"directReports":null}]},"salary":"800
+0","effectiveDate":"01/01/2020"}
+
+Verify that the Compensation Structure is returnd for that employee
+
+{"employee":{"employeeId":"16a596ae-edd3-4847-99fe-c4518e82c86f","firstName":"John","lastName":"Lennon","position":"Deve
+lopment Manager","department":"Engineering","directReports":[{"employeeId":"b7839309-3348-463b-a7e3-5de1c168beb3","first
+Name":null,"lastName":null,"position":null,"department":null,"directReports":null},{"employeeId":"03aa1462-ffa9-4978-901
+b-7c001562cf6f","firstName":null,"lastName":null,"position":null,"department":null,"directReports":null}]},"salary":"800
+0","effectiveDate":"01/01/2020"}
+
+
+Verify that the an error is returned for a invalid compensation request, invalid employee id
+
+{"timestamp":1584132888906,"status":500,"error":"Internal Server Error","exception":"java.lang.RuntimeException","messag
+e":"Invalid employeeId: 16a596ae-ed","path":"/compensation/"}
+
+Verify that the an error is returned for a invalid compensation request, invalid salary
+
+{"timestamp":1584132888938,"status":400,"error":"Bad Request","exception":"org.springframework.http.converter.HttpMessag
+eNotReadableException","message":"JSON parse error: For input string: \"abc\"; nested exception is com.fasterxml.jackson
+.databind.JsonMappingException: For input string: \"abc\"\n at [Source: java.io.PushbackInputStream@7ddaf76a; line: 1, c
+olumn: 63] (through reference chain: com.mindex.challenge.data.CompensationRequest[\"salary\"])","path":"/compensation/"
+}
+
+Verify that an error is returned for an employee who does not have a Compensation Structure
+
+{"timestamp":1584132888953,"status":500,"error":"Internal Server Error","exception":"java.lang.RuntimeException","messag
+e":"Compensation was not found for employeeId: b7839309-3348-463b-a7e3-5de1c168beb3","path":"/compensation/b7839309-3348
+-463b-a7e3-5de1c168beb3"}

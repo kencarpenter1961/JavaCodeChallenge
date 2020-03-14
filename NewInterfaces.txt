@@ -1,0 +1,18 @@
+
+### How to Use
+
+* READ
+    * HTTP Method: GET 
+    * URL: localhost:8080/employee/reportstructure{id}
+    * RESPONSE: ReportStructure
+
+* CREATE
+    * HTTP Method: POST 
+    * URL: localhost:8080/employee/compensation
+    * PAYLOAD: employeeId, salary, effectiveDate
+    * RESPONSE: Compensation
+	
+* READ
+    * HTTP Method: GET 
+    * URL: localhost:8080/employee/compensation/{id}
+    * RESPONSE: Compensation

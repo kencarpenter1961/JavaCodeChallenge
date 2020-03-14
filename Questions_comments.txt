@@ -1,0 +1,31 @@
+
+
+After reading the README.md I had many questions that I would normaly ask before starting coding.
+
+
+1) I was not sure the purpose of the comment "Clone or download the repository, do not fork it."
+2) the data provided in the senior-code-challenge\src\main\resources\static\employee_database.json did not match the README
+
+For following questions, I assumed :
+
+Specificaly for task 1
+1) the two properties: employee and numberOfReports did not have specific types so I assumed that
+	employee was of type employee
+	numberOfReports was of type int with a valid range of 0 to infinity
+2) The new REST endpoint was not specified so I assume it would be localhost:8080/reportingstructure/{id}
+3) The error case for an invalid employeeId is the same as for a READ of an invalid employee id.
+
+Specificaly for task 2
+1) the fields: employee, salary, and effectiveDate
+	employee is of type employee
+	salary is of type string, that is checked to be >= 0, it could be coded as an int.
+	effectiveDate is of type String, it could have been of type Date.
+	
+2) The new REST endpoint was not specified so I assume it would be localhost:8080/compensation/{id} and the data package
+is "employeeId":"<UUID>","salary":"<someString","effectiveDate":"<someString>"
+
+
+In summary, I'm not sure if what I did is what you wanted but it does "work".
+I tried to follow the existing code patterns and did not add as may comments that I would for production code.
+
+
