@@ -1,0 +1,6 @@
+HTTP/1.1 200 
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 13 Mar 2020 20:06:05 GMT
+
+{"employeeId":"6a8cc609-4633-4879-816c-b2e61f13125f","firstName":"ken","lastName":"carpenter","position":"pos","department":"dept","directReports":null}

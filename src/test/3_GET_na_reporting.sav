@@ -1,0 +1,8 @@
+{
+"timestamp":1584051699241,
+"status":500,
+"error":"Internal Server Error",
+"exception":"java.lang.RuntimeException",
+"message":"Invalid employeeId: 9999",
+"path":"/employee/9999"
+}
